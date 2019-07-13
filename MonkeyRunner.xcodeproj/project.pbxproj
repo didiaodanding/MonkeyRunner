@@ -13,6 +13,9 @@
 		18EE5E3022D6E6BE00CDD712 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18EE5E2F22D6E6BE00CDD712 /* Assets.xcassets */; };
 		18EE5E3322D6E6BE00CDD712 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18EE5E3122D6E6BE00CDD712 /* LaunchScreen.storyboard */; };
 		18EE5E3E22D6E6BE00CDD712 /* MonkeyRunnerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EE5E3D22D6E6BE00CDD712 /* MonkeyRunnerUITests.swift */; };
+		18EE5E4922D6E7AD00CDD712 /* XCTestMonkey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EE5E4822D6E7AD00CDD712 /* XCTestMonkey.swift */; };
+		18EE5E4E22D7502F00CDD712 /* Monkey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EE5E4D22D7502F00CDD712 /* Monkey.swift */; };
+		18EE5E5122D7550D00CDD712 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18EE5E5022D7550D00CDD712 /* XCTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		18EE5E3922D6E6BE00CDD712 /* MonkeyRunnerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonkeyRunnerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18EE5E3D22D6E6BE00CDD712 /* MonkeyRunnerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonkeyRunnerUITests.swift; sourceTree = "<group>"; };
 		18EE5E3F22D6E6BE00CDD712 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18EE5E4822D6E7AD00CDD712 /* XCTestMonkey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestMonkey.swift; sourceTree = "<group>"; };
+		18EE5E4D22D7502F00CDD712 /* Monkey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monkey.swift; sourceTree = "<group>"; };
+		18EE5E5022D7550D00CDD712 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18EE5E5122D7550D00CDD712 /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +69,7 @@
 				18EE5E2722D6E6BD00CDD712 /* MonkeyRunner */,
 				18EE5E3C22D6E6BE00CDD712 /* MonkeyRunnerUITests */,
 				18EE5E2622D6E6BD00CDD712 /* Products */,
+				18EE5E4A22D6E84A00CDD712 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,8 +100,18 @@
 			children = (
 				18EE5E3D22D6E6BE00CDD712 /* MonkeyRunnerUITests.swift */,
 				18EE5E3F22D6E6BE00CDD712 /* Info.plist */,
+				18EE5E4822D6E7AD00CDD712 /* XCTestMonkey.swift */,
+				18EE5E4D22D7502F00CDD712 /* Monkey.swift */,
 			);
 			path = MonkeyRunnerUITests;
+			sourceTree = "<group>";
+		};
+		18EE5E4A22D6E84A00CDD712 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18EE5E5022D7550D00CDD712 /* XCTest.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +225,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				18EE5E3E22D6E6BE00CDD712 /* MonkeyRunnerUITests.swift in Sources */,
+				18EE5E4922D6E7AD00CDD712 /* XCTestMonkey.swift in Sources */,
+				18EE5E4E22D7502F00CDD712 /* Monkey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +383,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 48U7H75HY6;
 				INFOPLIST_FILE = MonkeyRunner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -381,6 +402,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 48U7H75HY6;
 				INFOPLIST_FILE = MonkeyRunner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
