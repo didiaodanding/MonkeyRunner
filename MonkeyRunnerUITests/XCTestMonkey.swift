@@ -12,7 +12,7 @@ import XCTest
 public class XCTestMonkey{
     func startMonkey() -> Int {
         
-        let bundleID = "myCompany.tencent.LLDebugToolDemo1"
+        let bundleID = "myCompany.tencent.LLDebugToolDemo2"
     
         var app : XCUIApplication!
         app = XCUIApplication.init(bundleIdentifier: bundleID)
@@ -26,13 +26,11 @@ public class XCTestMonkey{
         NSLog("XCTestMonkeySetup->start monkey<-XCTestMonkeySetup")
         
         let monkey = Monkey()
-//        monkey.addXCTestTapAlertAction(interval: 100, application: app)
-        monkey.addXCTestCheckCurrentApp(interval: 10, application: app)
+
         
-        //add setup events
-        //        monkey.addXCTestAppLogin(application: app)
-        //        monkey.addXCTestAppQuiteH5Page(interval: 30, application: app)
-        //        monkey.addXCTestAppQuiteGamePlayPage(interval: 30, application: app)
+        monkey.addXCTestTapAlertAction(interval: 10, application: app)
+        monkey.addXCTestCheckCurrentApp(interval: 10, application: app)
+
         monkey.monkeyAround()
         RunLoop.main.run()
         return 0
